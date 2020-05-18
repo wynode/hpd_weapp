@@ -50,11 +50,41 @@
     <div class="home_s5">
       <image src="/static/images/首页icon/icon-sy-ad-kthy@3x.png" class="home_s5_img"></image>
     </div>
+
+    <div class="home_s6">
+      <title :title="'好铺多精选'"></title>
+      <div class="home_s6_content">
+        <div class="home_s6_card1">
+          <card :tagContent="'百货/购物中心'" ></card>
+        </div>
+        <div class="home_s6_card2">
+          <card imgUrl="/static/images/首页icon/card2.png"></card>
+        </div>
+      </div>
+    </div>
+
+    <div class="home_s7">
+      <title :title="'餐饮美食专题'"></title>
+      <div class="home_s7_content">
+        <img src="/static/images/首页icon/card3.jpg" alt="" class="hs7c_img">
+        <img src="/static/images/首页icon/icon-sy-cyms-tj@3x.png" alt="" class="hs7c_img2">
+        <div class="hs7c_info">
+          
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import title from "@/components/title";
+import card from "@/components/card";
+
 export default {
+  components: {
+    title,
+    card,
+  },
   data() {
     return {
       s2List: [
@@ -216,5 +246,23 @@ export default {
 .home_s5_img {
   width: 670px;
   height: 183px;
+}
+.home_s6 {
+  width: 670px;
+  margin: 0 auto;
+  margin-top: 46px;
+}
+.home_s6_content {
+  width: 670px;
+  margin: 0 auto;
+  margin-top: 23px;
+  display: flex;
+  justify-content: space-between;
+}
+.home_s6_card1 {
+  width: 442px;
+}
+.home_s6_card2 {
+  width: 214px;
 }
 </style>
