@@ -31,11 +31,22 @@ exports.cssLoaders = function (options) {
     }
   }
 
+  // var sassLoader = {
+  //   loader: 'sass-loader',
+  // }
+
+    // const px2remLoader = {
+  //   loader: 'px2rem-loader',
+  //   options: {
+  //     remUnit: 75
+  //   }
+  // }
+
   var px2rpxLoader = {
     loader: 'px2rpx-loader',
     options: {
       baseDpr: 1,
-      rpxUnit: 0.5
+      rpxUnit: 1
     }
   }
 
