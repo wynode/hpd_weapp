@@ -46,11 +46,19 @@
         <img src="/static/images/最新铺源icon/icon-py-px@3x.png" alt="" />
       </div>
     </div>
+    <div class="py_bottom">
+      <secitem v-for="item in 10" :key="item"></secitem>
+    </div>
   </div>
 </template>
 
 <script>
+import secitem from '@/components/secitem'
+
 export default {
+  components: {
+    secitem,
+  },
   data() {
     return {
       mainActiveIndex: 0,
@@ -133,9 +141,17 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+.py_bottom {
+  width: 690px;
+  margin: 0 auto;
+  margin-top: var(--test-margin-top, 50px);
+}
 .puyuan {
   width: 100%;
+  --search-background-color: #fff;
+  --test-margin-top: 10px;
+  --cell-line-height: 44px;
 }
 .puyuan .van-dropdown-menu {
   margin-left: -20px;
@@ -171,6 +187,10 @@ export default {
   margin: 0 auto;
   margin-top: 10px;
   margin-bottom: 20px;
+  .van-icon--image {
+    width: 32px;
+    height: 32px;
+  }
 }
 .puyuan_search .van-search {
   width: 710px;
@@ -178,23 +198,27 @@ export default {
   background: #fff;
 }
 .puyuan_search .van-search__content {
-  border-radius: 28px;
+  border-radius: 34px;
+  border: 1px solid #ddd;
+}
+.puyuan_search .van-search__field {
+  height: 58px;
 }
 .puyuan_search .van-field__input {
-  height: 48px;
-  line-height: 48px;
   font-size: 24px;
+  line-height: 48px;
 }
 .puyuan_search .van-cell__left-icon-wrap{
   width: 40px;
   height: 48px;
   line-height: 48px;
 }
-.puyuan_search .van-cell {
-  background: #fff;
-}
+// .puyuan_search .van-cell {
+//   background: #fff;
+// }
 .puyuan_search .van-icon__image {
   width: 32px;
   height: 32px;
 }
+
 </style>

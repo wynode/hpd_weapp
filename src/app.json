@@ -1,5 +1,12 @@
 {
-  "pages": ["pages/index/main", "pages/puyuan/main", "pages/my/main"],
+  "pages": [
+    "pages/index/main",
+    "pages/puyuan/main",
+    "pages/my/main",
+    "pages/zhuandian/main",
+    "pages/zhaodian/main",
+    "pages/hezuo/main"
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#EC514E",
@@ -11,7 +18,6 @@
     "backgroundColor": "#ffffff",
     "selectedColor": "#EC514E",
     "borderStyle": "black",
-
     "list": [
       {
         "text": "首页",
