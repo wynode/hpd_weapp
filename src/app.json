@@ -1,53 +1,48 @@
 {
-  "pages": ["pages/index/main", "pages/logs/main"],
+  "pages": ["pages/index/main", "pages/puyuan/main", "pages/my/main"],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#EC514E",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle": "black"
+    "navigationBarTitleText": "好铺多",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
-    "color": "#999",
-    "backgroundColor": "#fafafa",
-    "selectedColor": "#333",
-    "borderStyle": "white",
+    "color": "#171717",
+    "backgroundColor": "#ffffff",
+    "selectedColor": "#EC514E",
+    "borderStyle": "black",
 
     "list": [
       {
         "text": "首页",
         "pagePath": "pages/index/main",
-        "iconPath": "static/tabs/home.png",
-        "selectedIconPath": "static/tabs/home-active.png"
+        "iconPath": "/static/images/首页icon/icon1.png",
+        "selectedIconPath": "/static/images/首页icon/icon1_active.png"
       },
       {
-        "text": "订单",
-        "pagePath": "pages/logs/main",
-        "iconPath": "static/tabs/orders.png",
-        "selectedIconPath": "static/tabs/orders-active.png"
-      }
-    ],
-
-    "items": [
-      {
-        "name": "首页",
-        "pagePath": "pages/index/main",
-        "icon": "static/tabs/home.png",
-        "activeIcon": "static/tabs/home-active.png"
+        "text": "最新铺源",
+        "pagePath": "pages/puyuan/main",
+        "iconPath": "/static/images/首页icon/icon2.png",
+        "selectedIconPath": "/static/images/首页icon/icon2_active.png"
       },
       {
-        "name": "订单",
-        "pagePath": "pages/logs/main",
-        "icon": "static/tabs/orders.png",
-        "activeIcon": "static/tabs/orders-active.png"
+        "text": "我的",
+        "pagePath": "pages/my/main",
+        "iconPath": "/static/images/首页icon/icon3.png",
+        "selectedIconPath": "/static/images/首页icon/icon3_active.png"
       }
     ],
     "position": "bottom"
   },
   "usingComponents": {
-    "van-button": "/static/vant/button/index",
-    "van-image": "/static/vant/image/index",
-    "van-cell": "/static/vant/cell/index",
-    "van-cell-group": "/static/vant/cell-group/index",
-    "van-search": "/static/vant/search/index"
+    "van-button": "vant-weapp/dist/button/index",
+    "van-image": "vant-weapp/dist/image/index",
+    "van-cell": "vant-weapp/dist/cell/index",
+    "van-cell-group": "vant-weapp/dist/cell-group/index",
+    "van-search": "vant-weapp/dist/search/index",
+    "van-tag": "vant-weapp/dist/tag/index",
+    "van-dropdown-menu": "vant-weapp/dist/dropdown-menu/index",
+    "van-dropdown-item": "vant-weapp/dist/dropdown-item/index",
+    "van-tree-select": "vant-weapp/dist/tree-select/index"
   }
 }
