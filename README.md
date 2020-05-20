@@ -4,11 +4,11 @@
 
 ## Build Setup
 
-``` bash
-# 初始化项目
-vue init mpvue/mpvue-quickstart myproject
-cd myproject
+使用mpvue+vant+scss进行开发，进入目录cnpm install + npm dev即可。
 
+不能使用微信开发者工具预览是因为/static/images/文件过大，代码已经使用网络源代替，请自行更换。请不要过度依赖本网络源（随时可能会没钱续费）。
+
+``` bash
 # 安装依赖
 yarn
 
