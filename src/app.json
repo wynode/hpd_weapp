@@ -49,6 +49,7 @@
     "van-tag": "vant-weapp/dist/tag/index",
     "van-dropdown-menu": "vant-weapp/dist/dropdown-menu/index",
     "van-dropdown-item": "vant-weapp/dist/dropdown-item/index",
-    "van-tree-select": "vant-weapp/dist/tree-select/index"
+    "van-tree-select": "vant-weapp/dist/tree-select/index",
+    "van-field": "vant-weapp/dist/weapp/field/index"
   }
 }
