@@ -4,28 +4,34 @@
       <div class="ct_before"></div>
       <div class="ct_title">{{ title }}</div>
     </div>
-    <div class="ct_right" v-if="showMore">
+    <div class="ct_right" v-if="showMore" @click="gopuyuan">
       <div class="ct_right_more">
         <p>查看更多</p>
-        <img src="/static/images/首页icon/icon-sy-go@3x.png" alt="" class="ct_image">
+        <img src="http://wynode.com/haopuduo/首页icon/icon-sy-go@3x.png" alt="" class="ct_image">
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  props: {
-    title: {
-      type: String,
-      default: '标题'
+  export default {
+    props: {
+      title: {
+        type: String,
+        default: '标题'
+      },
+      showMore: {
+        type: Boolean,
+        default: true,
+      }
     },
-    showMore: {
-      type: Boolean,
-      default: true,
-    }
-  },
-};
+    methods: {
+      gopuyuan() {
+        const url = "/pages/puyuan/main";
+        wx.switchTab({ url })
+      },
+    },
+  };
 </script>
 
 <style>
@@ -68,7 +74,6 @@ export default {
     margin-top: 2px;
     margin-left: 9px;
   }
-
 </style>
 
 

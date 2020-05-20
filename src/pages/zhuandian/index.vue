@@ -1,86 +1,86 @@
 <template>
-  <div class="service" style="background-image: url('/static/images/转店服务icon/icon-zd-bg@3x.png')">
+  <div class="service" style="background-image: url('http://wynode.com/haopuduo/转店服务icon/icon-zd-bg@3x.png')">
     <div class="ser_top">
       <div class="ser_top_left">
-        <img class="img_1" src="/static/images/转店服务icon/icon-zd-address@3x.png" alt />
+        <img class="img_1" src="http://wynode.com/haopuduo/转店服务icon/icon-zd-address@3x.png" alt />
         <p>上海</p>
-        <img class="img_2" src="/static/images/转店服务icon/icon-zd-bottom@3x.png" alt />
+        <img class="img_2" src="http://wynode.com/haopuduo/转店服务icon/icon-zd-bottom@3x.png" alt />
       </div>
       <div class="ser_search">
-        <van-search left-icon="/static/images/转店服务icon/icon-zd-search@3x.png" shape="round" placeholder="转店铺 找项目" />
+        <van-search left-icon="http://wynode.com/haopuduo/转店服务icon/icon-zd-search@3x.png" shape="round" placeholder="转店铺 找项目" />
       </div>
     </div>
-    <div class="ser_s1" style="background-image: url('/static/images/转店服务icon/icon-zd-xqdj-bg@3x.png')">
+    <div class="ser_s1" style="background-image: url('http://wynode.com/haopuduo/转店服务icon/icon-zd-xqdj-bg@3x.png')">
       <div class="ser_s1_top">
         <div>
-          <img src="/static/images/转店服务icon/icon-zd-xx@3x.png" alt />
+          <img src="http://wynode.com/haopuduo/转店服务icon/icon-zd-xx@3x.png" alt />
           <p>发布信息</p>
           <span>精准匹配</span>
         </div>
         <div>
-          <img src="/static/images/转店服务icon/icon-zd-zj@3x.png" alt />
+          <img src="http://wynode.com/haopuduo/转店服务icon/icon-zd-zj@3x.png" alt />
           <p>转店专家</p>
           <span>高效指导</span>
         </div>
         <div>
-          <img src="/static/images/转店服务icon/icon-zd-hq@3x.png" alt />
+          <img src="http://wynode.com/haopuduo/转店服务icon/icon-zd-hq@3x.png" alt />
           <p>店铺行情</p>
           <span>一手掌握</span>
         </div>
         <div>
-          <img src="/static/images/转店服务icon/icon-zd-fw@3x.png" alt />
+          <img src="http://wynode.com/haopuduo/转店服务icon/icon-zd-fw@3x.png" alt />
           <p>会员服务</p>
           <span>为你定制</span>
         </div>
       </div>
-      <div class="ser_s1_btn">
-        <img src="/static/images/转店服务icon/icon-zd-btn@3x.png" alt />
+      <div class="ser_s1_btn" @click="gopaidian">
+        <img src="http://wynode.com/haopuduo/转店服务icon/icon-zd-btn@3x.png" alt />
         <p>转店需求登记</p>
       </div>
     </div>
-    <div class="ser_s2" style="background-image: url('/static/images/转店服务icon/icon-zd-tz-bg@3x.png')">
+    <div class="ser_s2" style="background-image: url('http://wynode.com/haopuduo/转店服务icon/icon-zd-tz-bg@3x.png')">
       <div class="ser_s2_1">
-        <img src="/static/images/转店服务icon/icon-zd-tz@3x.png" alt="">
+        <img src="http://wynode.com/haopuduo/转店服务icon/icon-zd-tz@3x.png" alt="">
         <p>感谢用户133****8888开通转店快服务</p>
       </div>
       <div class="ser_s2_2">
         <span>昨天</span>
-        <img src="/static/images/转店服务icon/icon-zd-go@3x.png" alt="" class="ser_s2_go">
+        <img src="http://wynode.com/haopuduo/转店服务icon/icon-zd-go@3x.png" alt="" class="ser_s2_go">
       </div>
     </div>
     <div class="ser_s3">
-      <div class="ser_s3_1" style="background-image: url('/static/images/转店服务icon/icon-zd-hy-bg@3x.png')">
-        <div class="ser_s3_btn" style="background-image: url('/static/images/转店服务icon/icon-zd-hy-btn@3x.png')">
+      <div class="ser_s3_1" style="background-image: url('http://wynode.com/haopuduo/转店服务icon/icon-zd-hy-bg@3x.png')">
+        <div class="ser_s3_btn" @click="gokaitong" style="background-image: url('http://wynode.com/haopuduo/转店服务icon/icon-zd-hy-btn@3x.png')">
           <p>开通转店会员</p>
         </div>
       </div>
-      <div class="ser_s3_2" style="background-image: url('/static/images/转店服务icon/icon-zd-kf-bg@3x.png')">
-        <div class="ser_s3_btn2" style="background-image: url('/static/images/转店服务icon/icon-zd-hy-btn@3x.png')">
+      <div class="ser_s3_2" style="background-image: url('http://wynode.com/haopuduo/转店服务icon/icon-zd-kf-bg@3x.png')">
+        <div class="ser_s3_btn2" style="background-image: url('http://wynode.com/haopuduo/转店服务icon/icon-zd-hy-btn@3x.png')">
           <p>立即咨询</p>
         </div>
       </div>
     </div>
     <div class="ser_s4">
       <div class="ser_s4_1">
-        <img src="/static/images/转店服务icon/icon-zd-share@3x.png" alt="">
+        <img src="http://wynode.com/haopuduo/转店服务icon/icon-zd-share@3x.png" alt="">
       </div>
       <div class="ser_s4_2">
         <h2>专业顾问为你服务</h2>
         <p>查看更多顾问
-          <img src="/static/images/转店服务icon/icon-zd-go@3x.png" alt="">
+          <img src="http://wynode.com/haopuduo/转店服务icon/icon-zd-more@3x.png" alt="">
         </p>
       </div>
       <div class="ser_s4_3">
         <div>
-          <img src="/static/images/转店服务icon/icon-zd-pg@3x.png" alt="">
+          <img src="http://wynode.com/haopuduo/转店服务icon/icon-zd-pg@3x.png" alt="">
           <p>专业评估 &nbsp;&nbsp;|</p>
         </div>
         <div>
-          <img src="/static/images/转店服务icon/icon-zd-tj@3x.png" alt="">
+          <img src="http://wynode.com/haopuduo/转店服务icon/icon-zd-tj@3x.png" alt="">
           <p>精准推荐 &nbsp;&nbsp;|</p>
         </div>
         <div>
-          <img src="/static/images/转店服务icon/icon-zd-yj@3x.png" alt="">
+          <img src="http://wynode.com/haopuduo/转店服务icon/icon-zd-yj@3x.png" alt="">
           <p>撮合议价</p>
         </div>
       </div>
@@ -88,12 +88,12 @@
     <div class="ser_s5">
       <div v-for="item in 3" :key="item" class="ser_s5_item">
         <div class="ser_s5_top">
-          <img class="ser_s5_img" src="/static/images/转店服务icon/tx.jpg" alt="">
+          <img class="ser_s5_img" src="http://wynode.com/haopuduo/转店服务icon/tx.jpg" alt="">
           <div>
             <h2>好铺多集团</h2>
             <p>苏贞昌</p>
             <div class="ser_s5_bottom">
-              <img src="/static/images/转店服务icon/icon-zd-ljlx-btn@3x.png" alt="">
+              <img src="http://wynode.com/haopuduo/转店服务icon/icon-zd-ljlx-btn@3x.png" alt="">
               <p>立即联系</p>
             </div>
           </div>
@@ -104,7 +104,22 @@
 </template>
 
 <script>
-  export default {};
+  export default {
+    methods: {
+      gokaitong() {
+        const url = "/pages/kaitong/main";
+        mpvue.navigateTo({
+          url
+        });
+      },
+      gopaidian() {
+        const url = "/pages/paidian/main";
+        mpvue.navigateTo({
+          url
+        });
+      }
+    },
+  };
 </script>
 
 <style lang="scss">
@@ -202,7 +217,7 @@
           font-size: 30px;
           color: #fff;
           position: absolute;
-          top: 14px;
+          top: 16px;
           left: 254px;
         }
       }
@@ -317,7 +332,7 @@
         }
         img {
           width: 9px;
-          height: 16px;
+          height: 14px;
           margin-left: 18px;
         }
       }

@@ -21,7 +21,7 @@ export default {
   props: {
     imgUrl: {
       type: String,
-      default: '/static/images/首页icon/section.jpg'
+      default: 'http://wynode.com/haopuduo/首页icon/section.jpg'
     }
   },
 }

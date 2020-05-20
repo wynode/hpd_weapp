@@ -2,8 +2,8 @@
   <div class="hezuo">
     <div v-for="item in 10" :key="item" class="hezuo_item">
       <div class="hezuo_left">
-        <img class="hezuo_img1" src="/static/images/品牌合作icon/icon-pphz-bg@3x.png" alt="">
-        <img class="hezuo_img2" src="/static/images/品牌合作icon/heytea.png" alt="">
+        <img class="hezuo_img1" src="http://wynode.com/haopuduo/品牌合作icon/icon-pphz-bg@3x.png" alt="">
+        <img class="hezuo_img2" src="http://wynode.com/haopuduo/品牌合作icon/heytea.png" alt="">
       </div>
       <div class="hezuo_right">
         <h1>喜茶</h1>
@@ -45,6 +45,7 @@
       }
       .hezuo_right {
         width: 360px;
+        padding-bottom: 10px;
         border-bottom: 2px solid #E3E3E3;
         h1 {
           font-size: 30px;
@@ -55,7 +56,7 @@
         p {
           color: #666666;
           font-size: 24px;
-          margin-top: 14px;
+          margin-top: 10px;
           font-weight: bold;
         }
         span {

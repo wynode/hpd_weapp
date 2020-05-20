@@ -1,14 +1,17 @@
 <template>
-  <div>
+  <div v-if="showkaipin" class="kaipin">
+    <img src="http://wynode.com/haopuduo/开屏icon/icon-kaiping@3x.png" alt="">
+  </div>
+  <div v-else>
     <div class="home_top">
-      <image class="home_top_img" src="/static/images/首页icon/icon-sy-ad@3x.png"></image>
+      <image class="home_top_img" src="http://wynode.com/haopuduo/首页icon/icon-sy-ad@3x.png"></image>
       <div class="home_top_ab">
         <div class="hta_left">
-          <image class="hta_location" src="/static/images/首页icon/icon-sy-address@3x.png" />
+          <image class="hta_location" src="http://wynode.com/haopuduo/首页icon/icon-sy-address@3x.png" />
           <text class="hta_text">上海</text>
-          <image class="hta_bottom" src="/static/images/首页icon/icon-sy-bottom@3x.png" />
+          <image class="hta_bottom" src="http://wynode.com/haopuduo/首页icon/icon-sy-bottom@3x.png" />
         </div>
-        <van-search class="hta_search" left-icon="/static/images/首页icon/icon-sy-search@3x.png" shape="round" placeholder="输入意向位置/业态" />
+        <van-search class="hta_search" left-icon="http://wynode.com/haopuduo/首页icon/icon-sy-search@3x.png" shape="round" placeholder="输入意向位置/业态" />
       </div>
     </div>
     <div class="home_s1">
@@ -17,162 +20,139 @@
     </div>
     <div class="home_s2">
       <div class="home_s2_item" @click="gozhuandian">
-        <image src="/static/images/首页icon/icon-sy-zd@3x.png" class="home_s2_img"></image>
+        <image src="http://wynode.com/haopuduo/首页icon/icon-sy-zd@3x.png" class="home_s2_img"></image>
         <text class="home_s2_text">转店服务</text>
       </div>
       <div class="home_s2_item" @click="gozhaodian">
-        <image src="/static/images/首页icon/icon-sy-zdfw@3x.png" class="home_s2_img"></image>
+        <image src="http://wynode.com/haopuduo/首页icon/icon-sy-zdfw@3x.png" class="home_s2_img"></image>
         <text class="home_s2_text">找店服务</text>
       </div>
       <div class="home_s2_item">
-        <image src="/static/images/首页icon/icon-sy-xz@3x.png" class="home_s2_img"></image>
+        <image src="http://wynode.com/haopuduo/首页icon/icon-sy-xz@3x.png" class="home_s2_img"></image>
         <text class="home_s2_text">闲置物品</text>
       </div>
       <div class="home_s2_item" @click="gohezuo">
-        <image src="/static/images/首页icon/icon-sy-pp@3x.png" class="home_s2_img"></image>
+        <image src="http://wynode.com/haopuduo/首页icon/icon-sy-pp@3x.png" class="home_s2_img"></image>
         <text class="home_s2_text">品牌合作</text>
       </div>
       <div class="home_s2_item">
-        <image src="/static/images/首页icon/icon-sy-zx@3x.png" class="home_s2_img"></image>
+        <image src="http://wynode.com/haopuduo/首页icon/icon-sy-zx@3x.png" class="home_s2_img"></image>
         <text class="home_s2_text">装修</text>
       </div>
     </div>
     <div class="home_s3">
-      <image src="/static/images/首页icon/icon-sy-ad2@3x.png" class="home_s3_img"></image>
-      <image src="/static/images/首页icon/icon-sy-ad1@3x.png" class="home_s3_img"></image>
+      <image src="http://wynode.com/haopuduo/首页icon/icon-sy-ad2@3x.png" class="home_s3_img"></image>
+      <image src="http://wynode.com/haopuduo/首页icon/icon-sy-ad1@3x.png" class="home_s3_img"></image>
     </div>
     <div class="home_s4">
-      <image src="/static/images/首页icon/icon-sy-tt@3x.png" class="home_s4_img"></image>
+      <image src="http://wynode.com/haopuduo/首页icon/icon-sy-tt@3x.png" class="home_s4_img"></image>
       <div class="home_s4_right">
-        <text>恭喜尾号8888顾客购买好铺多客户会员服务；恭喜尾号6666顾客购买好铺多房东会员服务；</text
-          >
-          <text
-            >恭喜尾号8888顾客购买好铺多客户会员服务；恭喜尾号6666顾客购买好铺多房东会员服务；</text
-          >
+        <p>恭喜尾号8888顾客购买好铺多客户会员服务；恭喜尾号6666顾客购买好铺多房东会员服务；</p>
+        <p>恭喜尾号8888顾客购买好铺多客户会员服务；恭喜尾号6666顾客购买好铺多房东会员服务；</p>
+      </div>
+    </div>
+    <div class="home_s5" @click="gokaitong">
+      <image src="http://wynode.com/haopuduo/首页icon/icon-sy-ad-kthy@3x.png" class="home_s5_img"></image>
+    </div>
+    <div class="home_s6">
+      <title :title="'好铺多精选'"></title>
+      <div class="home_s6_content">
+        <div class="home_s6_card1" @click="goshangpuxiangqin">
+          <card :tagContent="'百货/购物中心'"></card>
+        </div>
+        <div class="home_s6_card2" @click="goshangpuxiangqin">
+          <card imgUrl="http://wynode.com/haopuduo/首页icon/card2.png"></card>
         </div>
       </div>
-      <div class="home_s5">
-        <image
-          src="/static/images/首页icon/icon-sy-ad-kthy@3x.png"
-          class="home_s5_img"
-        ></image>
-      </div>
-      <div class="home_s6">
-        <title :title="'好铺多精选'"></title>
-        <div class="home_s6_content">
-          <div class="home_s6_card1">
-            <card :tagContent="'百货/购物中心'"></card>
-          </div>
-          <div class="home_s6_card2">
-            <card imgUrl="/static/images/首页icon/card2.png"></card>
-          </div>
-        </div>
-      </div>
-      <div class="home_s7">
-        <title :title="'餐饮美食专题'"></title>
-        <div class="home_s7_content">
-          <img src="/static/images/首页icon/card3.jpg" alt="" class="hs7c_img" />
-          <img
-            src="/static/images/首页icon/icon-sy-cyms-tj@3x.png"
-            alt=""
-            class="hs7c_img2"
-          />
-          <div class="hs7c_info">
-            店主自述：店铺位于顺义区鑫顺北大街，面积45平方，配套设施齐全，临街...
-            <span class="hs7c_go"
-              >查看详情
-              <img
-                src="/static/images/首页icon/icon-sy-cyms-go@3x.png"
-                alt=""
-                class="hs7c_img3"
-              />
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="home_s8">
-        <title :title="'便利超市专题'"></title>
-        <div class="home_s8_content">
-          <seccard></seccard>
-        </div>
-      </div>
-      <div class="home_s9">
-        <img
-          src="/static/images/首页icon/icon-sy-cksp@3x.png"
-          alt=""
-          class="home_s9_img"
-        />
-      </div>
-      <div class="home_s10">
-        <title :title="'转店选址顾问'"></title>
-        <div class="home_s10_content">
-          <div class="hs10_top">
-            <img src="/static/images/首页icon/renwu.jpg" alt="" />
-            <img src="/static/images/首页icon/renwu.jpg" alt="" />
-            <img src="/static/images/首页icon/renwu.jpg" alt="" />
-            <img src="/static/images/首页icon/renwu.jpg" alt="" />
-          </div>
-          <div class="hs10_bottom">
+    </div>
+    <div class="home_s7">
+      <title :title="'餐饮美食专题'"></title>
+      <div class="home_s7_content" @click="goshangpuxiangqin">
+        <img src="http://wynode.com/haopuduo/首页icon/card3.jpg" alt="" class="hs7c_img" />
+        <img src="http://wynode.com/haopuduo/首页icon/icon-sy-cyms-tj@3x.png" alt="" class="hs7c_img2" />
+        <div class="hs7c_info">
+          店主自述：店铺位于顺义区鑫顺北大街，面积45平方，配套设施齐全，临街...
+          <span class="hs7c_go">查看详情
             <img
-              src="/static/images/首页icon/icon-sy-zdxz-bg@3x.png"
+              src="http://wynode.com/haopuduo/首页icon/icon-sy-cyms-go@3x.png"
               alt=""
-              class="hs10_bottom_img"
+              class="hs7c_img3"
             />
-            <div class="hs10_bottom_content">
-              <div class="hs10_text1">石跃军</div>
-              <div class="hs10_text">
-                擅长行业：<span>休闲娱乐，服装鞋包，百货超市</span>
-              </div>
-              <div class="hs10_text">服务过的人数：<span>2385人</span></div>
-              <div class="hs10_ck">
-                查看详情
-                <img
-                  src="/static/images/首页icon/icon-sy-cyms-go@3x.png"
-                  alt=""
-                  class="hs7c_img3"
-                />
-              </div>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="home_s8">
+      <title :title="'便利超市专题'"></title>
+      <div class="home_s8_content" @click="goshangpuxiangqin">
+        <seccard></seccard>
+      </div>
+    </div>
+    <div class="home_s9" @click="gopuyuan">
+      <img src="http://wynode.com/haopuduo/首页icon/icon-sy-cksp@3x.png" alt="" class="home_s9_img" />
+    </div>
+    <div class="home_s10">
+      <title :title="'转店选址顾问'"></title>
+      <div class="home_s10_content">
+        <div class="hs10_top">
+          <img src="http://wynode.com/haopuduo/首页icon/renwu.jpg" alt="" />
+          <img src="http://wynode.com/haopuduo/首页icon/renwu.jpg" alt="" />
+          <img src="http://wynode.com/haopuduo/首页icon/renwu.jpg" alt="" />
+          <img src="http://wynode.com/haopuduo/首页icon/renwu.jpg" alt="" />
+        </div>
+        <div class="hs10_bottom">
+          <img src="http://wynode.com/haopuduo/首页icon/icon-sy-zdxz-bg@3x.png" alt="" class="hs10_bottom_img" />
+          <div class="hs10_bottom_content">
+            <div class="hs10_text1">石跃军</div>
+            <div class="hs10_text">
+              擅长行业：<span>休闲娱乐，服装鞋包，百货超市</span>
+            </div>
+            <div class="hs10_text">服务过的人数：<span>2385人</span></div>
+            <div class="hs10_ck">
+              查看详情
+              <img src="http://wynode.com/haopuduo/首页icon/icon-sy-cyms-go@3x.png" alt="" class="hs7c_img3" />
             </div>
           </div>
         </div>
       </div>
-      <div class="home_s11">
-        <title :title="'品牌合作'"></title>
-        <div class="home_s11_content">
-          <div>
-            <img src="/static/images/首页icon/waipo.jpg" alt="" />
-          </div>
-          <div>
-            <img src="/static/images/首页icon/xibei.jpg" alt="" />
-          </div>
-          <div>
-            <img src="/static/images/首页icon/haidilao.jpg" alt="" />
-          </div>
-          <div>
-            <img src="/static/images/首页icon/xibei.jpg" alt="" />
-          </div>
+    </div>
+    <div class="home_s11">
+      <title :title="'品牌合作'"></title>
+      <div class="home_s11_content">
+        <div>
+          <img src="http://wynode.com/haopuduo/首页icon/waipo.jpg" alt="" />
         </div>
-      </div>
-      <div class="home_s12">
-        <title :title="'成交案例'"></title>
-        <div class="home_s12_content">
-          <div>
-            <img src="/static/images/首页icon/meinv.jpg" alt="" />
-            <p>30天快速开店，好铺多助力王先生快速开店</p>
-          </div>
-          <div>
-            <img src="/static/images/首页icon/meinv.jpg" alt="" />
-            <p>30天快速开店，好铺多助力王先生快速开店</p>
-          </div>
+        <div>
+          <img src="http://wynode.com/haopuduo/首页icon/xibei.jpg" alt="" />
         </div>
-      </div>
-      <div class="home_s13">
-        <title :title="'猜你喜欢'" :showMore="false"></title>
-        <div class="home_s13_content">
-          <secitem v-for="item in 10" :key="item"></secitem>
+        <div>
+          <img src="http://wynode.com/haopuduo/首页icon/haidilao.jpg" alt="" />
+        </div>
+        <div>
+          <img src="http://wynode.com/haopuduo/首页icon/xibei.jpg" alt="" />
         </div>
       </div>
     </div>
+    <div class="home_s12">
+      <title :title="'成交案例'"></title>
+      <div class="home_s12_content">
+        <div>
+          <img src="http://wynode.com/haopuduo/首页icon/meinv.jpg" alt="" />
+          <p>30天快速开店，好铺多助力王先生快速开店</p>
+        </div>
+        <div>
+          <img src="http://wynode.com/haopuduo/首页icon/meinv.jpg" alt="" />
+          <p>30天快速开店，好铺多助力王先生快速开店</p>
+        </div>
+      </div>
+    </div>
+    <div class="home_s13">
+      <title :title="'猜你喜欢'" :showMore="false"></title>
+      <div class="home_s13_content" @click="goshangpuxiangqin">
+        <secitem v-for="item in 10" :key="item"></secitem>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -189,6 +169,7 @@
     },
     data() {
       return {
+        showkaipin: true,
       };
     },
     methods: {
@@ -205,16 +186,52 @@
         });
       },
       gohezuo() {
-        const url = "../hezuo/main";
+        const url = "/pages/hezuo/main";
         mpvue.navigateTo({
           url
         });
       },
+      gopuyuan() {
+        const url = "/pages/puyuan/main";
+        wx.switchTab({
+          url
+        })
+      },
+      goshangpuxiangqin() {
+        const url = "/pages/shangpuxiangqin/main";
+        mpvue.navigateTo({
+          url
+        });
+      },
+      gokaitong() {
+        const url = "/pages/kaitong/main";
+        mpvue.navigateTo({
+          url
+        });
+      }
+    },
+    mounted() {
+      const that = this
+      setTimeout(function() {
+        that.showkaipin = false
+      }, 3000);
     },
   };
 </script>
 
 <style>
+  .kaipin {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  .kaipin img {
+    width: 100%;
+    height: 100%;
+  }
   .home_top {
     height: 364px;
     width: 100%;

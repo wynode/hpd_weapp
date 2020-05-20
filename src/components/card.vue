@@ -27,7 +27,7 @@ export default {
     },
     imgUrl: {
       type: String,
-      default: '/static/images/首页icon/card1.jpg'
+      default: 'http://wynode.com/haopuduo/首页icon/card1.jpg'
     }
   },
 }

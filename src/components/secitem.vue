@@ -7,11 +7,17 @@
     <div class="c_section2_right">
       <div class="csr2_top">厦门市思明区望海路软件园二期朝</div>
       <div class="csr2_top_2">望海路-软件园二期 | 200㎡</div>
-      <div class="csr2_center">
+      <div class="csr2_center" v-if="btntype == 'warning'">
         <van-button round plain type="warning" size="mini" color="#EC514E" class="csr2_btn">餐饮美食</van-button>
         <van-button round plain type="warning" size="mini" color="#EC514E" class="csr2_btn">奶茶糕点</van-button>
         <van-button round plain type="warning" size="mini" color="#EC514E" class="csr2_btn">生鲜水果</van-button>
         <van-button round plain type="warning" size="mini" color="#EC514E" class="csr2_bt">其他</van-button>
+      </div>
+      <div class="csr2_center" v-else>
+        <van-button round plain type="default" size="mini" color="#A7A7A7" class="csr2_btn">餐饮美食</van-button>
+        <van-button round plain type="default" size="mini" color="#A7A7A7" class="csr2_btn">奶茶糕点</van-button>
+        <van-button round plain type="default" size="mini" color="#A7A7A7" class="csr2_btn">生鲜水果</van-button>
+        <van-button round plain type="default" size="mini" color="#A7A7A7" class="csr2_bt">其他</van-button>
       </div>
       <div class="csr2_bottom">
         <div>￥18800元<span> /月</span></div>
@@ -26,8 +32,12 @@ export default {
   props: {
     imgUrl: {
       type: String,
-      default: "/static/images/首页icon/room.jpg",
+      default: "http://wynode.com/haopuduo/首页icon/room.jpg",
     },
+    btntype: {
+      type: String,
+      default: "warning",
+    }
   },
 };
 </script>
@@ -102,6 +112,7 @@ export default {
   font-size: 18px;
   font-weight: 400;
   align-self: center;
+  margin-top: 8px;
 }
 
 
