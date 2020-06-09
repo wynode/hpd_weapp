@@ -1,6 +1,10 @@
 <template>
   <div v-if="showkaipin" class="kaipin">
     <img src="http://wynode.com/haopuduo/开屏icon/icon-kaiping@3x.png" alt="">
+    <div @click="tiaoguo" class="tiaoguo">
+      <h2>{{ countS }}S</h2>
+      <p>跳过</p>
+    </div>
   </div>
   <div v-else>
     <div class="home_top">
@@ -69,16 +73,17 @@
       <title :title="'餐饮美食专题'"></title>
       <div class="home_s7_content" @click="goshangpuxiangqin">
         <img src="http://wynode.com/haopuduo/首页icon/card3.jpg" alt="" class="hs7c_img" />
-        <img src="http://wynode.com/haopuduo/首页icon/icon-sy-cyms-tj@3x.png" alt="" class="hs7c_img2" />
+        <!-- <img src="http://wynode.com/haopuduo/首页icon/icon-sy-cyms-tj@3x.png" alt="" class="hs7c_img2" /> -->
+        <p class="hs7c_meishi">美食推荐</p>
         <div class="hs7c_info">
           店主自述：店铺位于顺义区鑫顺北大街，面积45平方，配套设施齐全，临街...
           <span class="hs7c_go">查看详情
-            <img
-              src="http://wynode.com/haopuduo/首页icon/icon-sy-cyms-go@3x.png"
-              alt=""
-              class="hs7c_img3"
-            />
-          </span>
+                <img
+                  src="http://wynode.com/haopuduo/首页icon/icon-sy-cyms-go@3x.png"
+                  alt=""
+                  class="hs7c_img3"
+                />
+              </span>
         </div>
       </div>
     </div>
@@ -169,10 +174,24 @@
     },
     data() {
       return {
+        countS: 3,
+        countSet: '',
         showkaipin: true,
       };
     },
+    watch: {
+      countS(newValue) {
+        if (newValue == 0) {
+          clearInterval(this.countSet)
+          this.showkaipin = false
+        }
+      }
+    },
     methods: {
+      tiaoguo() {
+        clearInterval(this.countSet)
+        this.showkaipin = false
+      },
       gozhuandian() {
         const url = "/pages/zhuandian/main";
         mpvue.navigateTo({
@@ -212,14 +231,42 @@
     },
     mounted() {
       const that = this
-      setTimeout(function() {
-        that.showkaipin = false
-      }, 3000);
+      // setTimeout(function() {
+      //   that.showkaipin = false
+      // }, 3000);
+      this.countSet = setInterval(function() {
+        that.countS -= 1
+      }, 1000);
     },
   };
 </script>
 
 <style>
+  body {
+    font-family: PingFang SC;
+  }
+  .tiaoguo {
+    background: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 66px;
+    right: 48px;
+    width: 62px;
+    height: 62px;
+    text-align: center;
+  }
+  .tiaoguo h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #E93534;
+    margin-top: 6px;
+    line-height: 1;
+  }
+  .tiaoguo p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #E93534;
+  }
   .kaipin {
     position: fixed;
     width: 100%;
@@ -389,6 +436,20 @@
   .hs7c_img {
     width: 670px;
     height: 300px;
+  }
+  .hs7c_meishi {
+    width: 88px;
+    height: 94px;
+    border-radius: 16px;
+    padding-top: 16px;
+    position: absolute;
+    top: -16px;
+    text-align: center;
+    right: 19px;
+    background-image: linear-gradient(to right, #ED7270, #EC524F);
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
   }
   .hs7c_img2 {
     width: 88px;

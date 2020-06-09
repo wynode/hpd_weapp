@@ -1,7 +1,12 @@
 <template>
   <div class="spxq">
     <div class="spxq_top">
-      <img src="http://wynode.com/haopuduo/商铺详情icon/bg1.jpg" alt="">
+      <img v-if="activeimage" src="http://wynode.com/haopuduo/首页icon/room.jpg" alt="">
+      <img v-else src="http://wynode.com/haopuduo/商铺详情icon/bg1.jpg" alt="">
+      <div class="spxq_topx">
+        <h2 @click="activeimage=false" :class="{ activebg: !activeimage }">视频</h2>
+        <p @click="activeimage=true" :class="{ activebg: activeimage }">图片</p>
+      </div>
     </div>
     <div class="spxq_s1">
       <h1>望海路软件园二期公寓低价转让</h1>
@@ -84,6 +89,7 @@
     data() {
       return {
         showRed: false,
+        activeimage: false,
       }
     },
     methods: {
@@ -103,9 +109,42 @@
     margin: 0 auto;
     .spxq_top {
       margin-top: 20px;
+      position: relative;
       img {
         width: 710px;
         height: 316px;
+      }
+      .spxq_topx {
+        display: flex;
+        width: 168px;
+        height: 42px;
+        border-radius: 20px;
+        position: absolute;
+        left: 271px;
+        bottom: 18px;
+        text-align: center;
+        background: #97999D;
+        h2 {
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 42px;
+          color: #fff;
+          width: 85px;
+          border-radius: 20px;
+          height: 42px
+        }
+        p {
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 42px;
+          color: #fff;
+          width: 85px;
+          border-radius: 20px;
+          height: 42px
+        }
+        .activebg {
+          background: #EC514E;
+        }
       }
     }
     .spxq_s1 {
